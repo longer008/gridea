@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="温故而知新">
+<meta name="theme-color" content="#000">
+<title>Longer`s博客</title>
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh//favicon.ico?v=1589162854453">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh//media/css/gemini.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh//media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="https://cdn.jsdelivr.net/gh//media/hljs/styles/androidstudio.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh//styles/main.css">
+
+<script src="https://cdn.jsdelivr.net/gh//media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="gemini">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Longer`s博客</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">精于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://github.com/post/xiang-ce/" target="_self">
+                  <i class="fa fa-globe"></i> 相册
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_blank">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout  gemini">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh//images/avatar.png"/>
+    <p class="site-author-name">Longer</p>
+    
+    <div class="site-description right-motion">
+      
+        <p id="binft">这个人很懒，什么都不想写。。。</p>
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">4</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">4</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://longer008.github.io/gridea-blog/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/longer008">
+              <i class="fa github" title="github"></i>
+            </a>
+          
+            <a href="">
+              <i class="fa fa-qq" title="qq"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
+  
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box tag-line box-shadow-wrapper">
+          <section class="section tags-section posts-expand bg-color">
+            <div class="padding-wrapper">
+  <div class="tag-timeline-box">
+    <div class="tag-timeline-wrapper">
+      <div class="tag-timeline-title">
+        <h2>
+          相册
+          <small class="language" data-lan="tag">标签</small>
+        </h2>
+      </div>
+      
+      
+      
+      <a href="https://longer008.github.io/gridea-blog/post/album/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              05-09
+              <small>相册</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      
+    </div>
+  </footer>
+  
+  
+  <div class="gemini back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+    
+    <div class="bg-img">
+      <img src="https://cdn.jsdelivr.net/gh/\media\images\custom-bgImg.jpg" />
+    </div>
+  
+  
+  
+    
+  <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://player.lmih.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
+
+
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'false'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target","_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch.addEventListener('click', function() {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+</script>
+  </div>
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://longer008.github.io/gridea-blog/post/album/"" data-c="
+          &lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://longer008.github.io/gridea-blog/post-images/1589009586716.jpeg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://longer008.github.io/gridea-blog/post-images/1589009593217.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">相册</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://longer008.github.io/gridea-blog/post/shou-ba-shou-jiao-ni-kan-quan-wang-vip-shi-pin-dian-nao-duan-and-yi-dong-duan/"" data-c="
+          &lt;h2 id=&#34;电脑端&#34;&gt;电脑端&lt;/h2&gt;
+&lt;h3 id=&#34;条件设施&#34;&gt;条件设施&lt;/h3&gt;
+&lt;p&gt;硬件需求：一台电脑（手机也可以，请看后文）。&lt;/p&gt;
+&lt;p&gt;软件需求：一个可以安装扩展的&lt;strong&gt;浏览器&lt;/strong&gt;（不是客户端）。Chrome，Microsoft Edge，Safari，Opera Next，Firefox都可以，我用的是Chrome浏览器。&lt;/p&gt;
+&lt;p&gt;需要安装Chrome浏览器的可以点下面链接下载安装&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;https://www.google.cn/chrome/&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装tampermonkey油猴&#34;&gt;安装Tampermonkey（油猴）&lt;/h3&gt;
+&lt;p&gt;介绍：一个用户脚本管理器&lt;/p&gt;
+&lt;h4 id=&#34;对于有条件的同学&#34;&gt;对于有条件的同学&lt;/h4&gt;
+&lt;p&gt;可以科学上网的同学请移步&lt;strong&gt;Chrome网上应用店&lt;/strong&gt;下载安装，地址：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;https://chrome.google.com/webstore/category/extensions&lt;/strong&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6VfzRURCCicKzYfzqtqGLzQBDE2LSJFwODicOR5qkeSQfjn12zv02o6dw/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;点击&lt;strong&gt;添加至Chrome&lt;/strong&gt;即可。&lt;/p&gt;
+&lt;h4 id=&#34;对于没条件的同学&#34;&gt;对于没条件的同学&lt;/h4&gt;
+&lt;p&gt;对于没条件的同学（打不开上面链接）也不用担心，我已经准备好了，有两种方法安装（建议使用第&lt;strong&gt;2&lt;/strong&gt;种）&lt;/p&gt;
+&lt;p&gt;\1. crx格式安装&lt;/p&gt;
+&lt;p&gt;复制 &lt;strong&gt;https://lanzous.com/ib97oxe&lt;/strong&gt; 下载即可&lt;/p&gt;
+&lt;p&gt;然后打开Chrome浏览器，点击 “&lt;strong&gt;X&lt;/strong&gt;”（关闭）按钮下面的&lt;strong&gt;三个点&lt;/strong&gt;，找到“&lt;strong&gt;更多工具&lt;/strong&gt;--&amp;gt;&lt;strong&gt;扩展程序&lt;/strong&gt;”并打开。&lt;/p&gt;
+&lt;p&gt;然后&lt;strong&gt;右上方&lt;/strong&gt;点击切换按钮打开“&lt;strong&gt;开发者模式&lt;/strong&gt;”，会出现以下内容&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6UjbdkV8ogunGFaavgTQo5ibFaVHEZe7xm8US1pSBXSQnNTSRwpb1cfQ/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;直接将下载的文件——“4.9_0.crx”拖入当前窗口即可&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6FxwwSdVOorqunUQyibkPqh8QnxOsWO1uRCsHAiaPqF8NHXLxDLIQxsnw/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;如果下载的时候报下面错误或其他错误&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6bIcHhODcO8rWqMib8x2ibFMdhsOgnYatWSVneqtRqYX4Z1Oxv82RZSuw/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;请使用第二种方法&lt;/p&gt;
+&lt;p&gt;\2. 解压压缩包安装&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;打开链接：https://lanzous.com/ib9ucbi&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下载完成后直接解压&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;别忘了解压到哪个目录哦，也不要随便放&lt;/li&gt;
+&lt;li&gt;如果解压报错请更换解压工具（建议使用&lt;strong&gt;bandzip&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然后在“&lt;strong&gt;开发者模式&lt;/strong&gt;”中点击“&lt;strong&gt;加载已解压的扩展程序&lt;/strong&gt;”，找到刚解压的目录，比如我解压到桌面了（不建议随便放）&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6L2cRXYoz62wMzj15Uicwhto1v9mhnU6rxSDfdmQT1N6UkJIvMcxNJ0w/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;以上就完成了油猴扩展的安装，下面安装用户脚本。&lt;/p&gt;
+&lt;h3 id=&#34;安装用户脚本&#34;&gt;安装用户脚本&lt;/h3&gt;
+&lt;p&gt;献上很有名的用户脚本网站**Greasy Fork：**&lt;strong&gt;https://greasyfork.org/zh-CN&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在这个网站中我们可以找到很多好玩有趣的脚本。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6JdbUGfeAb9MpucF0NHu9oZMKBwHbcIet2HT0zYQrU08KsN1W6ffuibQ/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;我就先点击“&lt;strong&gt;脚本列表&lt;/strong&gt;”了，正好，第一个就是看视频的，那就安装它吧。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6wZiblpf9uDmiamkuMU9tR1ezmk3zaYBXiaFNLbxWJ5YYqsvSgLmMOia4Hw/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;点击标题链接进入详情页面&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6Tc81C8ia3d5mCv41SeHR7IYzZfWiaqRYVspbrDMrCuvb13ShDEibGYxeA/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;如果之前没有安装过这个脚本的话直接点击“&lt;strong&gt;安装此脚本&lt;/strong&gt;”即可，接下来会跳转到油猴脚本管理器界面，点击&lt;strong&gt;安装&lt;/strong&gt;。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE679rM9QtfMScp35q3q9T388Gh9jebf5ZbYnhZLVOKglCibFeZGeHnpDw/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;检查是否安装成功和是否启用&#34;&gt;检查是否安装成功和是否启用&lt;/h3&gt;
+&lt;p&gt;点击油猴插件图标，下图的&lt;strong&gt;标号1&lt;/strong&gt;，标号2是我安装的另一个插件，不用管，点击&lt;strong&gt;标号3&lt;/strong&gt;进入管理面板&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6H8wGcKFFIDJdIMrUdRNQOSUgYkew3ibsej4xmUQITroliciapIHGaw4ng/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE68kVibEgDodXc7aTB2rKfcvzw64j04LibMIYYNkN56a1w4iblWB2sqgVlA/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;如果显示已启用就说明安装成功了，接下来我们测试一下，以xx视频为例，其他的一样：&lt;/p&gt;
+&lt;p&gt;进入xx视频&lt;strong&gt;网页版&lt;/strong&gt;，找一个VIP才能看的视频，我选了目前比较火的“&lt;strong&gt;龙岭迷窟&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;https://v.qq.com/x/cover/mzc00200q06w7zx/r0033bk1mxp.html&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进来后发现第7集只能会员播放，于是选择第7集&lt;/li&gt;
+&lt;li&gt;这时如果你没有登录或你不是会员的话会弹出一个框，直接关闭就行了&lt;/li&gt;
+&lt;li&gt;最后点击最左边的红色的显示VIP字样小框。（此时你会发现油猴图标发生了变化）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6zvDcM3XEribYosp6J9DYr6XkbYfh3ZgCqkiac0VoKRxx4mSyShLxpXWQ/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;点击左侧&lt;strong&gt;VIP按钮&lt;/strong&gt;后会打开一个新的标签页，点击中间的三角按钮（播放键）即可播放&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_png/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6ZwLV9AKTiajL31XAFu3afwsoJ4Bricxx1Nga7nARGZW7l7cs8qSLGsGQ/?wx_fmt=png&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;如果解析失败可以切换线路。&lt;/p&gt;
+&lt;h2 id=&#34;移动端&#34;&gt;移动端&lt;/h2&gt;
+&lt;h3 id=&#34;目前移动端的chrome浏览器还不支持安装扩展&#34;&gt;目前移动端的Chrome浏览器还不支持安装扩展&lt;/h3&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_jpg/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6f69sEcgZqhIfhf6RmzVGuLW6dbt8kZfH7fN8xcAsyt9jIyru09uP7g/?wx_fmt=jpeg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;移动端firefox浏览器安装扩展&#34;&gt;移动端Firefox浏览器安装扩展&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;还是点击首页右上角的三个点，然后点击&lt;strong&gt;附加组件&lt;/strong&gt;--&amp;gt;&lt;strong&gt;浏览Firefox推荐的扩展&lt;/strong&gt;就可以看到各种组建了，选择自己喜欢的进行安装。如果找不到油猴插件请继续下面步骤（刚进去我没有找到油猴插件，后面摸索发现需要设置一下）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;此时（Firefox推荐的扩展界面）继续点击那三个点，勾选“&lt;strong&gt;要求桌面版网站&lt;/strong&gt;”(勾选完界面会刷新)，很重要!!!。此时界面应该是：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;15&#34;&gt;&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_jpg/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6IqqrZJM0t8s3VwJDcXnrgm82ibI8ygGdVFBMKHU17pndickRadfPTAtg/?wx_fmt=jpeg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;搜索油猴插件，我输入的是&amp;quot;tam&amp;quot;  &lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_jpg/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6XzeuYJohDvHwMLEDXhkJ3mNpBOH69ERrENqLa63ibGE0YHiaca1lDu0g/?wx_fmt=jpeg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进去后安装即可，安装油猴插件和用户脚本的步骤与电脑端一样，脚本还是&lt;strong&gt;Greasy Fork&lt;/strong&gt;这个网站。安装完成后点三个点--&amp;gt;附加组件可以查看我们安装的组件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试     &lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_jpg/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6Mczj2dC1hibBwibgL70iazfpTHWeM1ibNWs1JNwqSs987u0odvvqpZY9ug/?wx_fmt=jpeg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后就是观看啦[/开心]&lt;img src=&#34;https://mmbiz.qpic.cn/mmbiz_jpg/dIocHS0oMoxJicgpUJ7FfyX8Vemjl7wE6xx3B0dQZW7Ha33el12YfYZXU7fIicE5SXEJKs5ZhhtVgBZgoOEjRbKw/?wx_fmt=jpeg&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​	有些同学反映安装的Firefox和我的不一样（IOS系统），建议在&lt;strong&gt;Google Play&lt;/strong&gt;安装，其他可以安装扩展的移动端浏览器如&lt;strong&gt;Yandex&lt;/strong&gt;，&lt;strong&gt;Kiwi Browser&lt;/strong&gt; 都在可以在****Google Play****找到。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;虽然这篇文章标题叫“手把手教你看全网VIP视频”，但看电影只用了一个小小的脚本，其他好玩的脚本还有很多，等着我们去探索。&lt;/li&gt;
+&lt;li&gt;在此感谢各位插件/脚本开发者[/抱拳]。&lt;/li&gt;
+&lt;li&gt;我写这篇文章的目的是为了让电脑小白也能看懂，有的地方可能有些啰嗦，望大家见谅。&lt;/li&gt;
+&lt;li&gt;如果有同学存在疑惑，可以来找我，乐意之至。&lt;/li&gt;
+&lt;li&gt;第一次写文章，如果有不对的地方请大家不吝赐教。&lt;/li&gt;
+&lt;/ul&gt;
+">手把手教你看全网VIP视频（电脑端and移动端）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://longer008.github.io/gridea-blog/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://longer008.github.io/gridea-blog/post/hello-gridea/"" data-c="
+          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
+✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
+&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
+&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
+&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
+&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
+&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
+&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
+&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
+&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
+&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
+&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
+&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
+&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
+&lt;p&gt;😘 Enjoy~&lt;/p&gt;
+">Hello Gridea</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="https://cdn.jsdelivr.net/gh//media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+<script src="/media/js/mouse/love.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/ /media/js/cool.js"></script>
+
+
+</html>
